@@ -19,6 +19,7 @@ class GoogleAuth extends Component {
     });
   }
 
+  // this invoke action creator, reducer, render
   onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
       this.props.signIn();
@@ -27,6 +28,8 @@ class GoogleAuth extends Component {
     }
   };
 
+  // this changes [this.auth.isSignedIn], leads to executing [onAuthChange]
+  // onAuthChange is set to isSignedIn property by listen　method
   onSignOutClick = () => {
     this.auth.signOut();
   };
