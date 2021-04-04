@@ -6,7 +6,6 @@ import { createStore } from 'redux';
 
 class StreamCreate extends React.Component {
   renderError = ({ error, touched }) => {
-    console.log(error, touched);
     if (touched && error) {
       return (
         <div className='ui error message'>
@@ -28,7 +27,6 @@ class StreamCreate extends React.Component {
   };
 
   onSubmit = (formValues) => {
-    console.log(formValues);
     this.props.createStream(formValues);
   };
 
